@@ -12,6 +12,7 @@ interface MobileMenuProps {
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const menuItems = [
+    { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/pricing", label: "Pricing" },
