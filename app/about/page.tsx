@@ -53,10 +53,10 @@ export default function AboutPage() {
 
         <Separator className="my-12" />
 
-        <section className="container px-6 py-12 md:py-24 lg:py-32">
+        {/* <section className="container px-6 py-12 md:py-24 lg:py-32">
           <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
           <TeamMemberGrid />
-        </section>
+        </section> */}
 
         <Separator className="my-12" />
 
