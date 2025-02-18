@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
 import { motion } from "framer-motion"
 import { SiteHeader } from "../components/site-header"
 import { Footer } from "../components/footer"
@@ -13,11 +15,51 @@ export default function Register() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [error, setError] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
+  
+  const router = useRouter()
+  const supabase = createClientComponentClient()
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle registration logic here
-    console.log("Register with:", name, email, password)
+    setError(null)
+    setLoading(true)
+
+    try {
+      // 1. Sign up the user with Supabase auth
+      const { data: authData, error: authError } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            full_name: name,
+          },
+        },
+      })
+
+      if (authError) throw authError
+
+      // 2. Create a record in the profiles table
+      const { error: profileError } = await supabase
+        .from('User')
+        .insert([
+          {
+            id: authData.user?.id,
+            fullName: name,
+            email: email,
+          }
+        ])
+
+      if (profileError) throw profileError
+
+      // 3. Redirect to OTP verification page
+      router.push(`/verify-otp?email=${encodeURIComponent(email)}`)
+    } catch (error) {
+      setError(error instanceof Error ? error.message : 'An error occurred during registration')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -83,8 +125,14 @@ export default function Register() {
                 </div>
               </div>
 
-              <Button type="submit" className="w-full">
-                Register
+              {error && (
+                <div className="text-red-500 text-sm mt-2">
+                  {error}
+                </div>
+              )}
+
+              <Button type="submit" className="w-full" disabled={loading}>
+                {loading ? "Creating account..." : "Register"}
               </Button>
             </form>
           </motion.div>

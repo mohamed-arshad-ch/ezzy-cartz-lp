@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DIRECT_URL")
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  password      String?   // Make password optional
+  provider      String?   // Add provider field
+  fullName      String?   // Add name field
+  avatarUrl     String?   // Add avatar URL field
+  providerData  Json?     // Add JSON field for additional provider data
+  hasOnboarded  Boolean   @default(false)  // Add hasOnboarded field with default false
+
+  onboardingDataId String?
+  OnboardingData   OnboardingData[]
+}
+
+model OnboardingData {
+  id               String @id @default(uuid())
+  companyName      String
+  customerType     String
+  businessSize     String
+  sellingPlatforms String
+  industries       String
+  user             User   @relation(fields: [userId], references: [id])
+  userId           String
+}

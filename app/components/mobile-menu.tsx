@@ -67,14 +67,14 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 transition={{ delay: 0.4, duration: 0.3 }}
                 className="mt-12 space-y-4 w-full max-w-xs"
               >
-                <Button variant="outline" size="lg" asChild className="w-full">
+                {/* <Button variant="outline" size="lg" asChild className="w-full">
                   <Link href="/signin" onClick={onClose}>
                     Log in
                   </Link>
-                </Button>
+                </Button> */}
                 <Button size="lg" asChild className="w-full">
-                  <Link href="/register" onClick={onClose}>
-                    Get Started
+                  <Link href="/signin" onClick={onClose}>
+                   Login
                   </Link>
                 </Button>
               </motion.div>
