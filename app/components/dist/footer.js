@@ -1,0 +1,61 @@
+"use strict";
+exports.__esModule = true;
+exports.Footer = void 0;
+var separator_1 = require("@/components/ui/separator");
+var link_1 = require("next/link");
+var image_1 = require("next/image");
+var fa6_1 = require("react-icons/fa6");
+function Footer() {
+    return (React.createElement("footer", { className: "border-t bg-background" },
+        React.createElement("div", { className: "container flex lg:px-24 px-4 flex-col gap-10 py-16" },
+            React.createElement("div", { className: "grid grid-cols-1 gap-12 md:grid-cols-5" },
+                React.createElement("div", { className: "flex flex-col gap-6 md:col-span-2" },
+                    React.createElement(link_1["default"], { href: "/", className: "flex items-center gap-2" },
+                        React.createElement(image_1["default"], { src: "/logo-fav-main.png", alt: "Quinx Logo", width: 120, height: 40 })),
+                    React.createElement("div", { className: "flex flex-col gap-2 text-sm text-muted-foreground" },
+                        React.createElement("p", null, "123 Business Street"),
+                        React.createElement("p", null, "City, State 12345"),
+                        React.createElement("p", null, "Phone: (555) 123-4567"),
+                        React.createElement("p", null, "Email: contact@quinx.com")),
+                    React.createElement("div", { className: "flex gap-4" },
+                        React.createElement(link_1["default"], { href: "#", className: "text-muted-foreground hover:text-foreground" },
+                            React.createElement(fa6_1.FaXTwitter, { size: 20 })),
+                        React.createElement(link_1["default"], { href: "#", className: "text-muted-foreground hover:text-foreground" },
+                            React.createElement(fa6_1.FaFacebookF, { size: 20 })),
+                        React.createElement(link_1["default"], { href: "#", className: "text-muted-foreground hover:text-foreground" },
+                            React.createElement(fa6_1.FaInstagram, { size: 20 })),
+                        React.createElement(link_1["default"], { href: "#", className: "text-muted-foreground hover:text-foreground" },
+                            React.createElement(fa6_1.FaGithub, { size: 20 })),
+                        React.createElement(link_1["default"], { href: "#", className: "text-muted-foreground hover:text-foreground" },
+                            React.createElement(fa6_1.FaLinkedinIn, { size: 20 })),
+                        React.createElement(link_1["default"], { href: "#", className: "text-muted-foreground hover:text-foreground" },
+                            React.createElement(fa6_1.FaDiscord, { size: 20 })))),
+                React.createElement("div", { className: "flex flex-col gap-4" },
+                    React.createElement("h3", { className: "text-lg font-semibold" }, "Product"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Features"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Pricing"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Changelog"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Documentation")),
+                React.createElement("div", { className: "flex flex-col gap-4" },
+                    React.createElement("h3", { className: "text-lg font-semibold" }, "Company"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "About"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Blog"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Careers"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Contact")),
+                React.createElement("div", { className: "flex flex-col gap-4" },
+                    React.createElement("h3", { className: "text-lg font-semibold" }, "Legal"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Privacy"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Terms"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Cookie Policy"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Licenses"))),
+            React.createElement(separator_1.Separator, null),
+            React.createElement("div", { className: "flex flex-col gap-4 md:flex-row md:items-center md:justify-between" },
+                React.createElement("p", { className: "text-sm text-muted-foreground" },
+                    "\u00A9 ",
+                    new Date().getFullYear(),
+                    " Quinx. All rights reserved."),
+                React.createElement("div", { className: "flex gap-4" },
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Privacy Policy"),
+                    React.createElement(link_1["default"], { href: "#", className: "text-sm text-muted-foreground hover:text-foreground" }, "Terms of Service"))))));
+}
+exports.Footer = Footer;
