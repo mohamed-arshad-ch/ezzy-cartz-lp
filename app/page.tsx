@@ -219,7 +219,7 @@ export default function Home() {
 
         <Separator className="my-12" />
 
-        <section id="pricing" className="container px-6 py-12 md:py-24 lg:py-32">
+        {/* <section id="pricing" className="container px-6 py-12 md:py-24 lg:py-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -265,7 +265,7 @@ export default function Home() {
             ))}
           </div>
           
-        </section>
+        </section> */}
 
         <Separator className="my-12" />
 
