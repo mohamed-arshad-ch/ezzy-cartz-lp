@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ezzycartz.com'), // Replace with your domain
+  metadataBase: new URL('https://www.ezzycartz.com'), // Replace with your domain
   title: {
     default: 'Ezzy Cartz - Build Ecommerce Stores With Ease',
     template: '%s | Ezzy Cartz'
@@ -64,11 +64,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ezzy Cartz - Build Ecommerce Stores With Ease',
     description: 'Create, deploy, and scale your online store without any coding knowledge.',
-    url: 'https://ezzycartz.com',
+    url: 'https://www.ezzycartz.com',
     siteName: 'Ezzy Cartz',
     images: [
       {
-        url: 'https://ezzycartz.com/og-image.png',
+        url: 'https://www.ezzycartz.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Ezzy Cartz Platform Preview',
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ezzy Cartz - Build Ecommerce Stores With Ease',
     description: 'Create, deploy, and scale your online store without any coding knowledge.',
-    images: ['https://ezzycartz.com/og-image.png'],
+    images: ['https://www.ezzycartz.com/og-image.png'],
   },
   other: {
     'msapplication-TileColor': '#ffffff',
