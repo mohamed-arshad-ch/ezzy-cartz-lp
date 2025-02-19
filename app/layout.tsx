@@ -88,7 +88,23 @@ export const metadata: Metadata = {
     'msapplication-TileImage': '/ms-icon-144x144.png',
     'theme-color': '#ffffff',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-site-verification-code',
+  },
 }
+
+
 
 export default function RootLayout({
   children,

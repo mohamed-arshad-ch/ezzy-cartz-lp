@@ -14,47 +14,7 @@ import { FootprintsIcon as Shoe, Palette, ShirtIcon, Utensils, Dumbbell, Laptop 
 import { Footer } from "./components/footer"
 import { WhatsAppButton } from "./components/whatsapp-button"
 
-export const metadata: Metadata = {
-  title: 'Ezzy Cartz - Build Your Ecommerce Store With Ease',
-  description: 'Create, deploy, and scale your online store without any coding knowledge. Start building your ecommerce empire today.',
-  keywords: 'ecommerce platform, online store builder, digital commerce, web shop creator',
-  openGraph: {
-    title: 'Ezzy Cartz - Build Your Ecommerce Store With Ease',
-    description: 'Create, deploy, and scale your online store without any coding knowledge.',
-    url: 'https://ezzycartz.com',
-    siteName: 'Ezzy Cartz',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Ezzy Cartz Preview',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Ezzy Cartz - Build Your Ecommerce Store With Ease',
-    description: 'Create, deploy, and scale your online store without any coding knowledge.',
-    images: ['/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-site-verification-code',
-  },
-}
+
 
 export default function Home() {
   const schemaData = {
