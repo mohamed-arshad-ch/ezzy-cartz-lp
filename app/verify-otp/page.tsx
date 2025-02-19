@@ -11,6 +11,8 @@ import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
+import { event } from '@/app/lib/gtag'
+import GoogleAnalytics from '../components/gtag-script'
 
 export default function VerifyOTP() {
   const [otp, setOtp] = useState(["", "", "", "", "", ""])
@@ -125,6 +127,14 @@ export default function VerifyOTP() {
         // Continue with sign in even if user record creation fails
       }
 
+      // Track OTP verification attempt
+      event({
+        action: 'otp_verification',
+        params: {
+          event_category: 'engagement',
+          event_label: 'OTP Verification Attempt'
+        }
+      })
 
       // If verification successful, redirect to onboarding
       router.push('/onboarding')
@@ -137,6 +147,7 @@ export default function VerifyOTP() {
 
   return (
     <div className="relative flex min-h-screen flex-col ">
+      <GoogleAnalytics />
       <SiteHeader />
       <main className="flex-1">
         <section className="container flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] py-12">

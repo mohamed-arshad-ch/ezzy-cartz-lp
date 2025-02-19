@@ -13,6 +13,7 @@ import { IndustryCard } from "./components/industry-card"
 import { FootprintsIcon as Shoe, Palette, ShirtIcon, Utensils, Dumbbell, Laptop } from "lucide-react"
 import { Footer } from "./components/footer"
 import { WhatsAppButton } from "./components/whatsapp-button"
+import GoogleAnalytics from './components/gtag-script'
 
 
 
@@ -44,6 +45,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
+      <GoogleAnalytics />
       
       <header>
         <SiteHeader />
