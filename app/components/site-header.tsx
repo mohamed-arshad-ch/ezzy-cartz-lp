@@ -91,11 +91,11 @@ export function SiteHeader() {
                 <NavigationMenuLink className="h-10 px-4 py-2">Services</NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <Link href="/pricing" legacyBehavior passHref>
                 <NavigationMenuLink className="h-10 px-4 py-2">Pricing</NavigationMenuLink>
               </Link>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
           </NavigationMenuList>
         </NavigationMenu>
         {!isAuthPage && (
