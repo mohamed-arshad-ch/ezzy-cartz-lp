@@ -37,7 +37,7 @@ export default function SignIn() {
       localStorage.setItem('session', JSON.stringify(data.session))
 
       router.refresh()
-      router.push('/dashboard')
+      router.push('/onboarding')
     } catch (error) {
       setError(error instanceof Error ? error.message : 'An error occurred')
     } finally {

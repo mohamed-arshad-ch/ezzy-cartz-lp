@@ -16,15 +16,21 @@ export default function VerifyOTP() {
   const [otp, setOtp] = useState(["", "", "", "", "", ""])
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const [email, setEmail] = useState<string>("")
   const inputRefs = useRef<(HTMLInputElement | null)[]>([])
   const router = useRouter()
- 
-
   const supabase = createClientComponentClient()
 
   useEffect(() => {
+    // Get email from localStorage
+    const storedEmail = localStorage.getItem('verificationEmail')
+    if (!storedEmail) {
+      router.push('/register')
+      return
+    }
+    setEmail(storedEmail)
     inputRefs.current[0]?.focus()
-  }, [])
+  }, [router])
 
   const handleChange = (element: HTMLInputElement, index: number) => {
     if (isNaN(Number(element.value))) return false
@@ -58,13 +64,67 @@ export default function VerifyOTP() {
     const otpString = otp.join("")
     
     try {
-      const { error } = await supabase.auth.verifyOtp({
-       
+      const { data,error } = await supabase.auth.verifyOtp({
+        email,
         token: otpString,
-        type: 'signup'
+        type: 'email'
       })
 
       if (error) throw error
+
+      // Clear email from localStorage after successful verification
+      localStorage.removeItem('verificationEmail')
+      localStorage.setItem("user", JSON.stringify(data.user))
+      
+
+      try { try {
+        const response = await fetch('/api/users/create', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            userId: data.user?.id,
+            email: data.user?.email,
+            name: data.user?.user_metadata?.full_name,
+            avatar_url: data.user?.user_metadata?.avatar_url,
+            // Include any other user metadata you receive from Google
+            provider: 'email',
+            created_at: new Date().toISOString(),
+          }),
+        })
+
+        if (!response.ok) {
+          throw new Error('Failed to create user record')
+        }
+      } catch (error) {
+        console.error('Error creating user record:', error)
+        // Continue with sign in even if user record creation fails
+      }
+        const response = await fetch('/api/users/create', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            userId: data.user?.id,
+            email: data.user?.email,
+            name: data.user?.user_metadata?.full_name,
+            avatar_url: data.user?.user_metadata?.avatar_url,
+            // Include any other user metadata you receive from Google
+            provider: 'google',
+            created_at: new Date().toISOString(),
+          }),
+        })
+
+        if (!response.ok) {
+          throw new Error('Failed to create user record')
+        }
+      } catch (error) {
+        console.error('Error creating user record:', error)
+        // Continue with sign in even if user record creation fails
+      }
+
 
       // If verification successful, redirect to onboarding
       router.push('/onboarding')

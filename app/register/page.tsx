@@ -53,8 +53,11 @@ export default function Register() {
 
       if (profileError) throw profileError
 
+      // Store email in localStorage
+      localStorage.setItem('verificationEmail', email)
+
       // 3. Redirect to OTP verification page
-      router.push(`/verify-otp?email=${encodeURIComponent(email)}`)
+      router.push('/verify-otp')
     } catch (error) {
       setError(error instanceof Error ? error.message : 'An error occurred during registration')
     } finally {
