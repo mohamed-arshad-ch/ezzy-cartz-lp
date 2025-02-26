@@ -14,7 +14,7 @@ import { FootprintsIcon as Shoe, Palette, ShirtIcon, Utensils, Dumbbell, Laptop 
 import { Footer } from "./components/footer"
 import { WhatsAppButton } from "./components/whatsapp-button"
 import GoogleAnalytics from './components/gtag-script'
-
+import Link from "next/link"
 
 
 export default function Home() {
@@ -99,7 +99,7 @@ export default function Home() {
                 Start Building
               </Button>
               <Button size="lg" variant="outline" className="h-12 px-8">
-                View Demo
+                <Link href="/templates">View Demo</Link>
               </Button>
             </motion.div>
           </motion.div>
