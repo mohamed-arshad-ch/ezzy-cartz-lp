@@ -136,7 +136,7 @@ export default function ServicesPage() {
 
         <Separator className="my-12" />
 
-        <section className="container px-6 py-12 md:py-24 lg:py-32">
+        {/* <section className="container px-6 py-12 md:py-24 lg:py-32">
         <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -151,9 +151,9 @@ export default function ServicesPage() {
                 </motion.div>
          
           <PortfolioGrid />
-        </section>
+        </section> */}
 
-        <Separator className="my-12" />
+        {/* <Separator className="my-12" /> */}
 
         <section className="container py-12 md:py-24 px-10 lg:py-32">
           <motion.div
