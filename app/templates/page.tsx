@@ -83,6 +83,22 @@ const templates = [
     image: "/templates/temp-8.png?height=600&width=800",
     demoUrl: "https://test5.ezzycartz.com/admin",
     category: "admin",
+  },
+  {
+    id: 11,
+    name: "JOLIE",
+    description: "Elegant cosmetics store with beauty product showcases and virtual try-on features",
+    image: "/templates/temp-11.png?height=600&width=800",
+    demoUrl: "https://test6.ezzycartz.com/",
+    category: "cosmetics",
+  },
+  {
+    id: 12,
+    name: "JOLIE Admin",
+    description: "Specialized admin dashboard for cosmetics inventory, customer analytics, and order management",
+    image: "/templates/temp-12.png?height=600&width=800",
+    demoUrl: "https://test6.ezzycartz.com/admin",
+    category: "admin",
   }
 ]
 
