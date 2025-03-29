@@ -115,6 +115,38 @@ const templates = [
     image: "/templates/temp-14.png?height=600&width=800",
     demoUrl: "https://test7.ezzycartz.com/admin",
     category: "admin",
+  },
+  {
+    id: 15,
+    name: "WatchVerse",
+    description: "Premium smartwatch store with interactive 3D previews and feature comparisons",
+    image: "/templates/temp-15.png?height=600&width=800",
+    demoUrl: "https://test8.ezzycartz.com/",
+    category: "electronics",
+  },
+  {
+    id: 16,
+    name: "WatchVerse Admin",
+    description: "Advanced admin portal for smartwatch inventory, sales analytics, and warranty management",
+    image: "/templates/temp-16.png?height=600&width=800",
+    demoUrl: "https://test8.ezzycartz.com/admin",
+    category: "admin",
+  },
+  {
+    id: 17,
+    name: "Organic",
+    description: "Modern organic food store with recipe integration and nutritional information tracking",
+    image: "/templates/temp-17.png?height=600&width=800",
+    demoUrl: "https://test9.ezzycartz.com/",
+    category: "food",
+  },
+  {
+    id: 18,
+    name: "Organic Admin",
+    description: "Specialized food store dashboard with inventory freshness tracking and recipe management",
+    image: "/templates/temp-18.png?height=600&width=800",
+    demoUrl: "https://test9.ezzycartz.com/admin",
+    category: "admin",
   }
 ]
 
