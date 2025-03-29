@@ -99,6 +99,22 @@ const templates = [
     image: "/templates/temp-12.png?height=600&width=800",
     demoUrl: "https://test6.ezzycartz.com/admin",
     category: "admin",
+  },
+  {
+    id: 13,
+    name: "Eliah",
+    description: "Premium cosmetics store with personalized beauty recommendations and skincare guides",
+    image: "/templates/temp-13.png?height=600&width=800",
+    demoUrl: "https://test7.ezzycartz.com/",
+    category: "cosmetics",
+  },
+  {
+    id: 14,
+    name: "Eliah Admin",
+    description: "Comprehensive beauty store management dashboard with inventory tracking and customer insights",
+    image: "/templates/temp-14.png?height=600&width=800",
+    demoUrl: "https://test7.ezzycartz.com/admin",
+    category: "admin",
   }
 ]
 
