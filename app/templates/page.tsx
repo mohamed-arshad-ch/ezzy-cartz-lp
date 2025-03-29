@@ -71,7 +71,7 @@ const templates = [
     id: 9,
     name: "Gadget Hub",
     description: "Modern electronics store with interactive product showcases and smart filtering",
-    image: "/templates/gadget-hub.png?height=600&width=800",
+    image: "/templates/temp-9.png?height=600&width=800",
     demoUrl: "https://test5.ezzycartz.com/",
     category: "electronics",
   },
@@ -80,7 +80,7 @@ const templates = [
     id: 10,
     name: "Analytics Dashboard",
     description: "Advanced analytics dashboard with real-time metrics, charts, and customizable widgets",
-    image: "/templates/temp-9.png?height=600&width=800",
+    image: "/templates/temp-8.png?height=600&width=800",
     demoUrl: "https://test5.ezzycartz.com/admin",
     category: "admin",
   }
