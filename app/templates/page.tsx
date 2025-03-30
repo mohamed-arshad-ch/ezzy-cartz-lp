@@ -6,7 +6,7 @@ import { SiteHeader } from "../components/site-header"
 import { Footer } from "../components/footer"
 import { Button } from "@/components/ui/button"
 import { TemplateCard } from "../components/template-card"
-import { Store, Shirt, FootprintsIcon, Palette, UtensilsCrossed, Dumbbell, Laptop } from "lucide-react"
+import { Store, Shirt, FootprintsIcon, Palette, UtensilsCrossed, Dumbbell, Laptop,PlaneTakeoffIcon } from "lucide-react"
 
 const categories = [
   { id: "all", label: "All", icon: Store },
@@ -16,6 +16,7 @@ const categories = [
   { id: "food", label: "Food", icon: UtensilsCrossed },
   { id: "fitness", label: "Fitness", icon: Dumbbell },
   { id: "electronics", label: "Electronics", icon: Laptop },
+  { id: "travel", label: "Travel", icon: PlaneTakeoffIcon },
   { id: "admin", label: "Admin Templates", icon: Laptop },
 ]
 
