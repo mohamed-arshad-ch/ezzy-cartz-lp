@@ -147,6 +147,22 @@ const templates = [
     image: "/templates/temp-18.png?height=600&width=800",
     demoUrl: "https://test9.ezzycartz.com/admin",
     category: "admin",
+  },
+  {
+    id: 19,
+    name: "SHOPMAX",
+    description: "Premium fashion marketplace with trend forecasting and personalized style recommendations",
+    image: "/templates/temp-19.png?height=600&width=800",
+    demoUrl: "https://test10.ezzycartz.com/",
+    category: "fashion",
+  },
+  {
+    id: 20,
+    name: "SHOPMAX Admin",
+    description: "Fashion-focused admin dashboard with inventory management, trend analytics, and seasonal planning",
+    image: "/templates/temp-20.png?height=600&width=800",
+    demoUrl: "https://test10.ezzycartz.com/admin",
+    category: "admin",
   }
 ]
 
