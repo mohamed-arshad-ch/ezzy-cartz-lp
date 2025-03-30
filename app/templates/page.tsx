@@ -179,6 +179,22 @@ const templates = [
     image: "/templates/temp-22.png?height=600&width=800",
     demoUrl: "https://test11.ezzycartz.com/admin",
     category: "admin",
+  },
+  {
+    id: 23,
+    name: "Foodie",
+    description: "Modern food delivery platform with real-time order tracking and restaurant management system",
+    image: "/templates/temp-23.png?height=600&width=800",
+    demoUrl: "https://test12.ezzycartz.com/",
+    category: "food",
+  },
+  {
+    id: 24,
+    name: "Foodie Admin",
+    description: "Complete restaurant management dashboard with order tracking, menu management, and delivery logistics",
+    image: "/templates/temp-24.png?height=600&width=800",
+    demoUrl: "https://test12.ezzycartz.com/admin",
+    category: "admin",
   }
 ]
 
