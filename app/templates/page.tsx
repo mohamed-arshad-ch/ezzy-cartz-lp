@@ -205,7 +205,22 @@ const templates = [
     demoUrl: "https://gobyte.mcodevbytes.in/",
     category: "travel",
   },
-  
+  {
+    id: 26,
+    name: "Trainer Personal",
+    description: "Professional fitness training platform with personal coaching, subscription plans, and workout programs",
+    image: "/templates/temp-26.png?height=600&width=800",
+    demoUrl: "https://test13.ezzycartz.com/",
+    category: "fitness",
+  },
+  {
+    id: 27,
+    name: "Trainer Personal Admin",
+    description: "Complete fitness business management system with trainer scheduling, membership tracking, and program analytics",
+    image: "/templates/temp-27.png?height=600&width=800",
+    demoUrl: "https://test13.ezzycartz.com/admin",
+    category: "admin",
+  }
 ]
 
 export default function TemplatesPage() {
