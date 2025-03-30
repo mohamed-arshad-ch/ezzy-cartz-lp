@@ -163,6 +163,22 @@ const templates = [
     image: "/templates/temp-20.png?height=600&width=800",
     demoUrl: "https://test10.ezzycartz.com/admin",
     category: "admin",
+  },
+  {
+    id: 21,
+    name: "PulseFit",
+    description: "Dynamic fitness store with workout gear, supplements, and interactive fitness planning tools",
+    image: "/templates/temp-21.png?height=600&width=800",
+    demoUrl: "https://test11.ezzycartz.com/",
+    category: "fitness",
+  },
+  {
+    id: 22,
+    name: "PulseFit Admin",
+    description: "Comprehensive fitness store dashboard with inventory tracking, supplement batch management, and workout plan tools",
+    image: "/templates/temp-22.png?height=600&width=800",
+    demoUrl: "https://test11.ezzycartz.com/admin",
+    category: "admin",
   }
 ]
 
