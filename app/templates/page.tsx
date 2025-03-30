@@ -196,7 +196,16 @@ const templates = [
     image: "/templates/temp-24.png?height=600&width=800",
     demoUrl: "https://test12.ezzycartz.com/admin",
     category: "admin",
-  }
+  },
+  {
+    id: 25,
+    name: "GoByte Travel",
+    description: "Comprehensive travel booking platform with hotels, flights, tours, and cab services integration",
+    image: "/templates/temp-25.png?height=600&width=800",
+    demoUrl: "https://gobyte.mcodevbytes.in/",
+    category: "travel",
+  },
+  
 ]
 
 export default function TemplatesPage() {
